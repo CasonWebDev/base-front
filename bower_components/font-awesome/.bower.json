@@ -1,0 +1,36 @@
+{
+  "name": "font-awesome",
+  "description": "Font Awesome",
+  "keywords": [],
+  "homepage": "http://fontawesome.io",
+  "dependencies": {},
+  "devDependencies": {},
+  "license": [
+    "OFL-1.1",
+    "MIT",
+    "CC-BY-3.0"
+  ],
+  "main": [
+    "less/font-awesome.less",
+    "scss/font-awesome.scss"
+  ],
+  "ignore": [
+    "*/.*",
+    "*.json",
+    "src",
+    "*.yml",
+    "Gemfile",
+    "Gemfile.lock",
+    "*.md"
+  ],
+  "_release": "bdfa9823c8",
+  "_resolution": {
+    "type": "branch",
+    "branch": "fa-4",
+    "commit": "bdfa9823c8b1e25a5c822f6c719ec0e38ead7f71"
+  },
+  "_source": "https://github.com/CasonWebDev/Font-Awesome.git",
+  "_target": "fa-4",
+  "_originalSource": "CasonWebDev/Font-Awesome",
+  "_direct": true
+}

@@ -1,0 +1,73 @@
+/* ======== Font */
+=font($weigth)
+  font-family: 'Montserrat', sans-serif
+  font-weight: $weigth
+
+$texto: #363636
+$azul: #2d5596
+$azuld: #294662
+
+$celular: max-width 440px
+$tablet: max-width 991px
+$monitor: min-width 992px
+
+=flexbox
+  display: -webkit-box
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flexbox
+  display: flex
+
+=gradient($angle,$gradient1, $gradient2)
+  background-color: $gradient2 
+  background-image: -webkit-gradient(linear, $angle, from($gradient1), to($gradient2))
+  background-image: -webkit-linear-gradient($angle, $gradient1, $gradient2)
+  background-image:    -moz-linear-gradient($angle, $gradient1, $gradient2)
+  background-image:     -ms-linear-gradient($angle, $gradient1, $gradient2)
+  background-image:      -o-linear-gradient($angle, $gradient1, $gradient2)
+  background-image:         linear-gradient($angle, $gradient1, $gradient2)
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=$angle,StartColorStr='#{$gradient1}', EndColorStr='#{$gradient2}')
+
+/* ======== Outros */
+=transition($transition...) 
+  -moz-transition:    all $transition linear
+  -o-transition:      all $transition linear
+  -webkit-transition: all $transition linear
+  transition:         all $transition linear
+
+=border-radius($radius) 
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  -ms-border-radius: $radius
+  border-radius: $radius
+
+@function calculateRem($size) 
+  $remSize: $size / 16px
+  @return $remSize * 1rem
+
+=font-size($size) 
+  font-size: $size
+  font-size: calculateRem($size)
+
+=opacity($opacity) 
+  opacity: $opacity
+  $opacity-ie: $opacity * 100
+  filter: alpha(opacity=$opacity-ie)
+
+/* ======== Background Color Opacity */
+=background-opacity($color: #000, $opacity: 0.85) 
+  background: $color
+  background: rgba($color, $opacity)
+
+=polygon($percent, $total: 100%)
+  -webkit-clip-path: polygon(0 0, $total 0, $percent $total, 0% $total)
+  clip-path: polygon(0 0, $total 0, $percent $total, 0% $total)
+
+=polygoninv($percent, $total: 100%)
+  -webkit-clip-path: polygon($percent 0, $total 0, $total $total, 0 $total)
+  clip-path: polygon($percent 0, $total 0, $total $total, 0 $total)
+
+=shadow($hor,$ver,$blu,$spr,$op)
+  -webkit-box-shadow: $hor $ver $blu $spr rgba(0,0,0,$op)
+  -moz-box-shadow: $hor $ver $blu $spr rgba(0,0,0,$op)
+  box-shadow: $hor $ver $blu $spr rgba(0,0,0,$op)
