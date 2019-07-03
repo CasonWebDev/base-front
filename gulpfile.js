@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var sourcemaps = require('gulp-sourcemaps');
+var uglifycss = require('gulp-uglifycss');
 
 gulp.task('sass', function () {
     return gulp.src([
